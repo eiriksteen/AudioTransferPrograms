@@ -1,7 +1,7 @@
 #receive wav file through tcp and play 
 
 from socket import *
-import sound
+import recordplaywavfile
 import pyaudio
 import wave
 
@@ -39,7 +39,7 @@ def receiveAudio(filename):
     wf.writeframes(audio)
     wf.close()
 
-    sound.playWavFile(filename)
+    recordplaywavfile.playWavFile(filename)
 
     connectionSocket.send("success".encode())
     connectionSocket.close()
