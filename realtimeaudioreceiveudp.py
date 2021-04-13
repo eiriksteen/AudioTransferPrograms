@@ -14,6 +14,8 @@ def receiveAudio():
     sample_format = pyaudio.paInt16 
     channels = 1
     fs = 44100  
+    
+    p = pyaudio.PyAudio()
 
     stream = p.open(format=sample_format,
                     channels=channels,
